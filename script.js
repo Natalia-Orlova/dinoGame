@@ -9,8 +9,10 @@ document.addEventListener('keydown', function(event) {
 })
 
 document.addEventListener('touchstart', function(event) {
-    jump();
-    event.preventDefault();
+    if (!event.target.closest('#control')) {
+        jump();
+        event.preventDefault();
+    }
 })
 
 function startGame() {
