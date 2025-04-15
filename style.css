@@ -71,10 +71,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 20px;
     width: 200px;
     height: 20%;
     background: linear-gradient(to bottom right, #ccc, #fff);
     border-radius: 20px;
+}
+#takeBonus {
+    display: none;
 }
 
 

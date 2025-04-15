@@ -1,7 +1,7 @@
 const dino = document.getElementById('dino');
 const cactus = document.getElementById('cactus');
 const startBtn = document.getElementById('start');
-const messageBox = document.querySelector('.popup');
+const takeBonusBtn = document.getElementById('takeBonus');
 const controlBox = document.querySelector('.control');
 
 document.addEventListener('keydown', function(event) {
@@ -27,22 +27,6 @@ function jump() {
     }, 300);
 }
 
-// let isAlive = setInterval(function() {
-//     let dinoTop = parseInt(window.getComputedStyle(dino).getPropertyValue('top'))
-//     let cactusLeft = parseInt(window.getComputedStyle(cactus).getPropertyValue('left'))
-//     let count = 0;
-
-//     if (cactusLeft < 50 && cactusLeft > 0 && dinoTop >= 140) {
-//         cactus.classList.remove('start')
-//         controlBox.style.display = 'flex'
-//         messageBox.innerHTML = `
-//             <p>Забрать ${count}</p>
-//         `
-//         startBtn.innerText = 'Сыграть еще раз'
-//     }
-//     count += 1;
-//     document.getElementById('bonus').textContent = count;
-// }, 10)
 
 let count = 0;
 let lastCactusPosition = 0;
@@ -67,7 +51,8 @@ let isAlive = setInterval(function() {
     if (cactusLeft < 50 && cactusLeft > 0 && dinoTop >= 140) {
         cactus.classList.remove('start');
         controlBox.style.display = 'flex';
-        messageBox.innerHTML = `<p>Забрать ${count}</p>`;
+        takeBonusBtn.innerText = `Забрать ${count}`;
+        takeBonusBtn.style.display = 'block';
         startBtn.innerText = 'Сыграть еще раз';
     }
 }, 10);
