@@ -20,6 +20,7 @@ function startGame() {
     document.getElementById('bonus').textContent = count;
     cactus.classList.add('start')
     controlBox.style.display = 'none'
+    scoredForThisCactus = false;
 }
 
 function jump() {
