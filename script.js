@@ -16,6 +16,8 @@ document.addEventListener('touchstart', function(event) {
 })
 
 function startGame() {
+    count = 0;
+    document.getElementById('bonus').textContent = count;
     cactus.classList.add('start')
     controlBox.style.display = 'none'
 }
