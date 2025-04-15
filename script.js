@@ -8,6 +8,11 @@ document.addEventListener('keydown', function(event) {
     jump();
 })
 
+document.addEventListener('touchstart', function(event) {
+    jump();
+    event.preventDefault();
+})
+
 function startGame() {
     cactus.classList.add('start')
     controlBox.style.display = 'none'
