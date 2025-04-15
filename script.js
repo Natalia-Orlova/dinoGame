@@ -9,7 +9,7 @@ document.addEventListener('keydown', function(event) {
 })
 
 document.addEventListener('touchstart', function(event) {
-    if (!event.target.closest('.control')) {
+    if (!event.target.closest('#takeBonus') && !event.target.closest('#start')) {
         jump();
         event.preventDefault();
     }
